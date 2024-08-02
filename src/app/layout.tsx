@@ -17,9 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
 
-      <Script
+        <Script
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=G-BK492PS1F6`}
             />
@@ -32,6 +33,9 @@ export default function RootLayout({
                     gtag('config', 'G-BK492PS1F6');
                 `}
             </Script>
+      </body>
+
+      
     </html>
   );
 }
